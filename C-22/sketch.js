@@ -1,6 +1,6 @@
 var starImg, fairyImg, bgImg;
 var fairy, fairyVoice;
-var star, starBody;
+var star, starBody,starImageImg;
 
 const Engine = Matter.Engine;
 const World = Matter.World;
@@ -56,6 +56,8 @@ function draw() {
 
     if (star.isTouching(fairy)) {
     star.velocityY = 0;
+    star.x = fairy.x + 100;
+    star.y = fairy.y - 10;
     }
 
     drawSprites();
